@@ -27,63 +27,78 @@
   font-family: Roboto-Regular, sans-serif;
 }
 
+html,body{
+  height:100%;
+  padding:0;
+  margin:0;
+}
+
 body {
   background: rgb(22, 16, 32);
 
-  h1 {
-    color: rgb(142, 172, 255);
-    font-size: 18px;
-    letter-spacing: 6px;
-    text-align: center;
-    text-transform: uppercase;
-  }
+  #metronome {
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-  .impulse {
-    margin: 100px 0;
-
-    .sphere {
-      margin: 0 auto;
-      border-radius: 100%;
-      background: rgb(100, 188, 164);
-      height: 132px;
-      width: 132px;
-
-      text-align: center;
-      line-height: 132px;
-      color: rgb(22, 16, 32);
-      font-size: 24px;
-      letter-spacing: 1.33px;
-
-      animation: pulse .83s infinite;
-    }
-  }
-
-  .button-list {
-    max-width: 300px;
-    margin: 150px auto 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    button {
-      width: 28%;
-      font-size: 14px;
+    h1 {
       color: rgb(142, 172, 255);
-      background: rgb(45, 28, 63);
-      padding: 10px 0;
-      margin-bottom: 11px;
-      border: none;
-      border-radius: 5px;
-      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
-      cursor: pointer;
+      font-size: 18px;
+      letter-spacing: 6px;
+      text-align: center;
+      text-transform: uppercase;
+    }
 
-      &.active {
-        background: rgb(142, 172, 255);
+    .impulse {
+      margin: 100px 0;
+
+      .sphere {
+        margin: 0 auto;
+        border-radius: 100%;
+        background: rgb(100, 188, 164);
+        height: 132px;
+        width: 132px;
+
+        text-align: center;
+        line-height: 132px;
         color: rgb(22, 16, 32);
-        cursor: default;
+        font-size: 24px;
+        letter-spacing: 1.33px;
+
+        animation: pulse .83s infinite;
       }
-      &:focus {
-        outline: none;
+    }
+
+    .button-list {
+      max-width: 300px;
+      margin: 150px auto 100px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      button {
+        width: 28%;
+        font-size: 14px;
+        color: rgb(142, 172, 255);
+        background: rgb(45, 28, 63);
+        padding: 10px 0;
+        margin-bottom: 11px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+
+        &.active {
+          background: rgb(142, 172, 255);
+          color: rgb(22, 16, 32);
+          cursor: default;
+        }
+
+        &:focus {
+          outline: none;
+        }
       }
     }
   }
