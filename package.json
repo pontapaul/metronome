@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/pontapaul/metronome#readme",
   "dependencies": {
+    "file-loader": "^6.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },

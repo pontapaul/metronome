@@ -19,6 +19,11 @@ module.exports = {
                 test: /\.(scss|css)$/,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
             },
+            {
+                test: /\.(woff|woff2|eot|ttf|svg)$/,
+                loader: 'file-loader',
+                options: { name: '[name].[ext]', outputPath: 'fonts/', }
+            },
         ]
     },
     plugins: [HTMLWebpackPluginConfig],
