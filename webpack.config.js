@@ -32,8 +32,7 @@ module.exports = {
         path: __dirname + '/dist'
     },
     devServer: {
-        inline: false,
-        port: 8001,
+        inline: true,
         quiet: false
     },
 };
