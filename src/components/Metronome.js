@@ -1,6 +1,7 @@
 import  React, { Component } from 'react';
 import  Impulse from './Impulse';
 import  BpmButton from './BpmButton';
+import TrackList from './TrackList';
 import PropTypes from 'prop-types';
 
 const availableBpm = [72, 74, 82, 84, 128, 138];
@@ -29,6 +30,7 @@ class Metronome extends Component {
             <div className="button-list">
                 {availableBpm.map(bpm => <BpmButton bpm={bpm} active={(this.state.activeBpm === bpm)} clickHandler={this.setActiveBpm} key={bpm} />)}
             </div>
+            <TrackList bpm={this.state.activeBpm} />
         </div>;
     }
 }

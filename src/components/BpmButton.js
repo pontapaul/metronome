@@ -18,6 +18,7 @@ class BpmButton extends Component {
 
 BpmButton.propTypes = {
     active: PropTypes.bool,
+    bpm: PropTypes.number.isRequired,
     clickHandler: PropTypes.func.isRequired,
 };
 
