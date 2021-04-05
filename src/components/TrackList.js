@@ -12,11 +12,13 @@ class TrackList extends Component {
             loading: true,
         };
 
-        this.fetchSongs();
+        this.fetchSongs(false);
     }
 
-    fetchSongs() {
-        this.setState({loading: true});
+    fetchSongs(toggleLoader = true) {
+        if(toggleLoader) {
+            this.setState({loading: true});
+        }
 
         this.Spotify.searchByBpm(this.props.bpm).then(data => this.setState({
             tracks: data.tracks,
@@ -34,7 +36,7 @@ class TrackList extends Component {
         return <div className={"song-list " + (this.state.loading ? 'loading' : '')}>
             <h3>Songs that use this BPM:</h3>
             <div className="loader" />
-            {this.state.tracks.map(track => <p>
+            {this.state.tracks.map(track => <p key={track.id}>
                 {track.name} ({track.artists.map(artist => artist.name).join(', ')}) <a href={track.uri} target="_blank" title="Play on Spotify"> &#9658;</a>
             </p>)}
         </div>;
